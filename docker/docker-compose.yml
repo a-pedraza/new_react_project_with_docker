@@ -3,10 +3,10 @@ services:
   client:
     stdin_open: true
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ../
+      dockerfile: /docker/Dockerfile
     ports:
       - "3000:3000"
     volumes:
       - "/app/node_modules"
-      - "./:/app"
+      - "../:/app"
